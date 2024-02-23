@@ -1,15 +1,21 @@
-import './Header.css';
 import HeaderIcons from '../HeaderIcons/HeaderIcons';
 import Logo from '../Logo/Logo';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
+import styled from 'styled-components';
+
+const HeaderContainer = styled.header`
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+`;
 
 function Header() {
     return (
-        <header className='header'>
+        <HeaderContainer>
             <Logo></Logo>
             <HeaderMenu></HeaderMenu>
             <HeaderIcons></HeaderIcons>
-        </header>
+        </HeaderContainer>
     );
 }
 

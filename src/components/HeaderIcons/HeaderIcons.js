@@ -1,21 +1,32 @@
-import './HeaderIcons.css';
 import perfil from '../../images/perfil.svg';
 import sacola from '../../images/sacola.svg';
+import styled from 'styled-components';
 
 const icons = [
     perfil,
     sacola
 ];
 
+const Icon = styled.li`
+    margin-right: 40px;
+    width: 25px;
+`;
+
+const HeaderIconsContainer = styled.ul`
+    display: flex;
+    list-style: none;
+    align-items: center;
+`;
+
 function HeaderIcons() {
     return (
-       <ul className='header-icons'>
+       <HeaderIconsContainer>
             {
                 icons.map(icon => (
-                    <li className='header-icons__icon'><img src={icon}></img></li>
+                    <Icon><img src={icon}></img></Icon>
                 ))
             }
-       </ul>
+       </HeaderIconsContainer>
     );
 }
 
