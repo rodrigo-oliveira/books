@@ -1,6 +1,6 @@
 import './HeaderIcons.css';
-import perfil from '../images/perfil.svg';
-import sacola from '../images/sacola.svg';
+import perfil from '../../images/perfil.svg';
+import sacola from '../../images/sacola.svg';
 
 const icons = [
     perfil,
@@ -9,10 +9,10 @@ const icons = [
 
 function HeaderIcons() {
     return (
-       <ul className='HeaderIcons'>
+       <ul className='header-icons'>
             {
                 icons.map(icon => (
-                    <li className='HeaderIcons__icon'><img src={icon}></img></li>
+                    <li className='header-icons__icon'><img src={icon}></img></li>
                 ))
             }
        </ul>

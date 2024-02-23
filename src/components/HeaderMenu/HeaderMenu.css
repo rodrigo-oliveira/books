@@ -1,8 +1,8 @@
-.menu {
+.header-menu {
     display: flex;
 }
 
-.menu__item {
+.header-menu__item {
     font-size: 16px;
     display: flex;
     justify-content: center;
