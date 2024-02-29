@@ -1,14 +1,14 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const menuItems = [
     'Categorias',
     'Minha estante',
     'Favoritos'
-]
+];
 
 const HeaderMenuContainer = styled.ul`
     display: flex;
-`
+`;
 
 const MenuItem = styled.li`
     font-size: 16px;
@@ -21,13 +21,13 @@ const MenuItem = styled.li`
     height: 100%;
     padding: 0 5px;
     cursor: pointer;
-`
+`;
 
 function HeaderMenu() {
     return (
         <HeaderMenuContainer>
             { menuItems.map(menuItem => (
-                <MenuItem>{ menuItem }</MenuItem>
+                <MenuItem key={menuItem}>{ menuItem }</MenuItem>
             ))}
         </HeaderMenuContainer>
     );

@@ -20,13 +20,13 @@ const HeaderIconsContainer = styled.ul`
 
 function HeaderIcons() {
     return (
-       <HeaderIconsContainer>
-            {
-                icons.map(icon => (
-                    <Icon><img src={icon}></img></Icon>
-                ))
-            }
-       </HeaderIconsContainer>
+        <HeaderIconsContainer>
+                {
+                    icons.map((icon, index) => (
+                        <Icon key={index}><img src={icon} alt=''></img></Icon>
+                    ))
+                }
+        </HeaderIconsContainer>
     );
 }
 
