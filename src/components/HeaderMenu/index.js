@@ -28,7 +28,9 @@ function HeaderMenu() {
     return (
         <HeaderMenuContainer>
             { menuItems.map(menuItem => (
-                <Link to={`${menuItem.toLowerCase()}`}><MenuItem key={menuItem}>{ menuItem }</MenuItem></Link>
+                <MenuItem key={menuItem}>
+                    <Link to={`${menuItem.toLowerCase()}`}>{ menuItem }</Link>
+                </MenuItem>
             )) }
         </HeaderMenuContainer>
     );

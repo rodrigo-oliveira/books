@@ -11,11 +11,16 @@ const LastReleasesContainer = styled.section`
     flex-direction: column;
 `;
 
-const NewBooksContainer = styled.div`
+const NewBooksList = styled.ul`
     margin: 30px 0;
+    padding: 0;
     display: flex;
     width: 100%;
     justify-content: center;
+    list-style: none;
+`;
+
+const NewBook = styled.li`
     cursor: pointer;
 `;
 
@@ -25,11 +30,13 @@ function LastReleases() {
             <Title
                 color={"#EB9B00"}
                 fontSize={"36px"}>Últimos lançamentos</Title>
-            <NewBooksContainer>
+            <NewBooksList>
                 { books.map( book => (
-                    <li key={book.id}><img key={book.id} src={book.src} alt={book.name} /></li>
+                    <NewBook key={book.id}>
+                        <img key={book.id} src={book.src} alt={book.name} />
+                    </NewBook>
                 ) ) }
-            </NewBooksContainer>
+            </NewBooksList>
             <CardRecommendation
                 title="Talvez você se interesse por"
                 subtitle="Angular 11"
