@@ -12,7 +12,7 @@ const LastReleasesContainer = styled.section`
 `;
 
 const NewBooksContainer = styled.div`
-    margin-top: 30px;
+    margin: 30px 0;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -26,8 +26,8 @@ function LastReleases() {
                 color={"#EB9B00"}
                 fontSize={"36px"}>Últimos lançamentos</Title>
             <NewBooksContainer>
-                { books.map( livro => (
-                    <img src={livro.src} alt={livro.nome} />
+                { books.map( book => (
+                    <li key={book.id}><img key={book.id} src={book.src} alt={book.name} /></li>
                 ) ) }
             </NewBooksContainer>
             <CardRecommendation

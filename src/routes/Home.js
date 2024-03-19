@@ -1,22 +1,19 @@
 import styled from 'styled-components';
-import Header from './components/Header';
-import Search from './components/Search';
-import LastReleases from './components/LastReleases';
+import Search from '../components/Search';
+import LastReleases from '../components/LastReleases';
 
 const AppContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background-image: linear-gradient(90deg, #002F52 35%, #326589);
 `;
 
-function App() {
+function Home() {
   return (
     <AppContainer>
-      <Header />
       <Search />
       <LastReleases />
     </AppContainer>
   );
 }
 
-export default App;
+export default Home;

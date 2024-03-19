@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const menuItems = [
     'Categorias',
-    'Minha estante',
+    'Estante',
     'Favoritos'
 ];
 
@@ -27,8 +28,8 @@ function HeaderMenu() {
     return (
         <HeaderMenuContainer>
             { menuItems.map(menuItem => (
-                <MenuItem key={menuItem}>{ menuItem }</MenuItem>
-            ))}
+                <Link to={`${menuItem.toLowerCase()}`}><MenuItem key={menuItem}>{ menuItem }</MenuItem></Link>
+            )) }
         </HeaderMenuContainer>
     );
 }
