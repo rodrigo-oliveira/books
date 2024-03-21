@@ -3,6 +3,7 @@ import Input from '../Input';
 import { useEffect, useState } from 'react';
 import { getBooks } from '../../services/books';
 import { postFavoriteBook } from '../../services/favoriteBooks';
+import { Star } from 'react-feather';
 
 const SearchContainer = styled.section`
     color: #FFF;
@@ -94,7 +95,7 @@ function Search() {
                                         <p>{book.name}</p>
                                         <img src={book.src} alt={book.name} />
                                         <ResultActions>
-                                            <p onClick={() => inserFavoriteBook(book.id)} >Adicionar aos favoritos</p>
+                                            <Star onClick={() => inserFavoriteBook(book.id)}></Star>Adicionar aos favoritos
                                         </ResultActions>
                                     </Result>)
                                 })

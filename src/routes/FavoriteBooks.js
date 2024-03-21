@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { deleteFavoriteBook, getFavoriteBooks } from '../services/favoriteBooks';
 import livroImg from '../images/livro.png'
+import { Trash } from 'react-feather';
 
 const AppContainer = styled.div`
    width: 100vw;
-   height: 100vh;
-   background-image: linear-gradient(90deg,#002F52 35%,#326589 165%);
+   background: #EBECEE;
 `;
 
 const ResultContainer = styled.div`
@@ -36,7 +36,7 @@ const Result = styled.div`
 `;
 
 const Title = styled.h2`
-   color: #FFF;
+   color: #181818;
    font-size: 36px;
    text-align: center;
    width: 100%;
@@ -71,7 +71,7 @@ function Favoritos() {
              <Result>
                <p>{favoriteBook.name}</p>
                <img src={livroImg} alt={favoriteBook.name}/>
-               <p onClick={()=>deleteFavorite(favoriteBook.id)}>Deletar favorito</p>
+               <p>Deletar favorito</p><Trash color='white' onClick={()=>deleteFavorite(favoriteBook.id)}></Trash>
              </Result>
            )) : null
          }

@@ -1,11 +1,5 @@
-import perfil from '../../images/perfil.svg';
-import sacola from '../../images/sacola.svg';
+import { ShoppingBag, User } from 'react-feather';
 import styled from 'styled-components';
-
-const icons = [
-    perfil,
-    sacola
-];
 
 const Icon = styled.li`
     margin-right: 40px;
@@ -21,11 +15,8 @@ const HeaderIconsContainer = styled.ul`
 function HeaderIcons() {
     return (
         <HeaderIconsContainer>
-                {
-                    icons.map((icon, index) => (
-                        <Icon key={index}><img src={icon} alt=''></img></Icon>
-                    ))
-                }
+             <User></User>
+             <ShoppingBag></ShoppingBag>
         </HeaderIconsContainer>
     );
 }
