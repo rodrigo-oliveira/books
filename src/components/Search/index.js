@@ -2,23 +2,24 @@ import styled from 'styled-components';
 import Input from '../Input';
 import { useEffect, useState } from 'react';
 import { getBooks } from '../../services/books';
+import { postFavoriteBook } from '../../services/favoriteBooks';
 
 const SearchContainer = styled.section`
-        color: #FFF;
-        text-align: center;
-        padding: 85px 0;
-        width: 100%;
+    color: #FFF;
+    text-align: center;
+    padding: 85px 0;
+    width: 100%;
 `;
 const Title = styled.h2`
-        color: #FFF;
-        font-size: 36px;
-        text-align: center;
-        width: 100%;
+    color: #FFF;
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
 `;
 const Subtitle = styled.h3`
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
 `;
 const ResultsContainer = styled.div`
     padding: 20px;
@@ -48,6 +49,10 @@ const Result = styled.li`
     }
 `;
 
+const ResultActions = styled.div`
+display: flex
+`;
+
 function Search() {
     const [booksSearched, setBooksSearched] = useState([]);
     const [books, setBooks] = useState([])
@@ -60,6 +65,11 @@ function Search() {
     async function fetchBooks() {
         const apiBooks = await getBooks();
         setBooks(apiBooks);
+    }
+
+    async function inserFavoriteBook(id) {
+        await postFavoriteBook(id);
+        alert(`Livro de id: ${id} inserido com sucesso`);
     }
  
     return (
@@ -83,6 +93,9 @@ function Search() {
                                     return (<Result key={book.id}>
                                         <p>{book.name}</p>
                                         <img src={book.src} alt={book.name} />
+                                        <ResultActions>
+                                            <p onClick={() => inserFavoriteBook(book.id)} >Adicionar aos favoritos</p>
+                                        </ResultActions>
                                     </Result>)
                                 })
                             }
