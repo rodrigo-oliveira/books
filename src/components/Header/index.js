@@ -10,12 +10,17 @@ const HeaderContainer = styled.header`
     justify-content: center;
 `;
 
+const LogoLink = styled(Link)`
+    text-decoration: none;
+    color: #181818;
+`;
+
 function Header() {
     return (
         <HeaderContainer>
-            <Link to="/">
+            <LogoLink to="/">
                 <Logo />
-            </Link>
+            </LogoLink>
             <HeaderMenu />
             <HeaderIcons />
         </HeaderContainer>

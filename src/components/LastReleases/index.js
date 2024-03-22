@@ -2,10 +2,9 @@ import { books } from './lastReleasesData';
 import styled from 'styled-components'
 import Title from '../Title';
 import CardRecommendation from '../CardRecommendation';
-import ImageBook from '../../images/livro2.png';
+import PlaceholderBookSvg from '../../images/placeholder_book_140.svg';
 
 const LastReleasesContainer = styled.section`
-    background-color: #EBECEE;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -22,26 +21,26 @@ const NewBooksList = styled.ul`
 
 const NewBook = styled.li`
     cursor: pointer;
+    margin-right: 20px;
 `;
 
 function LastReleases() {
     return (
         <LastReleasesContainer>
             <Title
-                color={"#EB9B00"}
-                fontSize={"36px"}>Últimos lançamentos</Title>
+                fontSize={'36px'}>Últimos lançamentos</Title>
             <NewBooksList>
                 { books.map( book => (
                     <NewBook key={book.id}>
-                        <img key={book.id} src={book.src} alt={book.name} />
+                        <img key={book.id} src={PlaceholderBookSvg} alt={book.name} />
                     </NewBook>
                 ) ) }
             </NewBooksList>
             <CardRecommendation
-                title="Talvez você se interesse por"
-                subtitle="Angular 11"
-                description="Construindo uma aplicação com a plataforma Google"
-                img={ImageBook}
+                title='Talvez você se interesse por esse livro'
+                subtitle='Angular 11'
+                description='Construindo uma aplicação com a plataforma Google'
+                img={PlaceholderBookSvg}
             />
         </LastReleasesContainer>
         

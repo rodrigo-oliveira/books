@@ -1,7 +1,7 @@
 import { ShoppingBag, User } from 'react-feather';
 import styled from 'styled-components';
 
-const Icon = styled.li`
+const HeaderIcon = styled.li`
     margin-right: 40px;
     width: 25px;
 `;
@@ -15,8 +15,12 @@ const HeaderIconsContainer = styled.ul`
 function HeaderIcons() {
     return (
         <HeaderIconsContainer>
-             <User></User>
-             <ShoppingBag></ShoppingBag>
+             <HeaderIcon>
+                <User></User>
+             </HeaderIcon>
+             <HeaderIcon>
+                <ShoppingBag></ShoppingBag>
+             </HeaderIcon>
         </HeaderIconsContainer>
     );
 }

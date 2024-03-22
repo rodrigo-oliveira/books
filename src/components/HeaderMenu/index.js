@@ -24,12 +24,21 @@ const MenuItem = styled.li`
     cursor: pointer;
 `;
 
+const MenuLink = styled(Link)`
+    text-decoration: none;
+    color: #181818;
+
+    &:hover {
+        text-decoration: underline;
+    }
+`;
+
 function HeaderMenu() {
     return (
         <HeaderMenuContainer>
             { menuItems.map(menuItem => (
                 <MenuItem key={menuItem}>
-                    <Link to={`${menuItem.toLowerCase()}`}>{ menuItem }</Link>
+                    <MenuLink to={`${menuItem.toLowerCase()}`}>{ menuItem }</MenuLink>
                 </MenuItem>
             )) }
         </HeaderMenuContainer>
