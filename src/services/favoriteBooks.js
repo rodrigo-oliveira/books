@@ -1,7 +1,7 @@
 import axios from 'axios';
 import serverConfig from '../config/server-config';
 
-const favoriteBooksAPI =  axios.create({baseURL: `${serverConfig.apiUrl}/livros`});
+const favoriteBooksAPI = axios.create({baseURL: `${serverConfig.apiUrl}/books`});
 
 async function getFavoriteBooks() {
     const response = await favoriteBooksAPI.get('/');
