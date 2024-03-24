@@ -10,7 +10,7 @@ This project was created as part of the process of completing the Full Stack Jav
 
 Course: [Full stack JavaScript: crie um projeto com React e Node.js](https://cursos.alura.com.br/formacao-full-stack-react-node-js)
 
-Back-end: https://github.com/rodrigo-oliveira/books-server
+Back-end repository: https://github.com/rodrigo-oliveira/books-server
 
 ## Available Scripts
 
