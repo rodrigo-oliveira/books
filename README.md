@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Node version: 16.18.1
 
+# About
+
+This project was created as part of the process of completing the Full Stack JavaScript course offered by Alura. It presents an application developed using React 16 for the front-end and the Node.js environment for the back-end.
+
+Course: [Full stack JavaScript: crie um projeto com React e Node.js](https://cursos.alura.com.br/formacao-full-stack-react-node-js)
+
+Back-end: https://github.com/rodrigo-oliveira/books-server
+
 ## Available Scripts
 
 In the project directory, you can run:
